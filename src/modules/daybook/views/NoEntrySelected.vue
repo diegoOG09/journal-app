@@ -15,12 +15,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/styles/variables.scss";
 .no-entry-selected {
   display: block;
   margin-top: 25%;
   text-align: center;
   h1 {
     margin: 0;
+    color: $almost-white;
   }
 }
 </style>

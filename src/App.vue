@@ -4,7 +4,12 @@
 
 <style lang="scss">
 html {
+  font-family: 'Roboto', sans-serif;
   height: 100vh;
-  background-color: #a3b38f;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
 }
 </style>

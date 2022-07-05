@@ -1,11 +1,17 @@
 <template>
   <button>
-    <i class="fa-solid fa-circle-plus"></i>
+    <i class="fa-solid fa-circle-plus" :class="icon"></i>
   </button>
 </template>
 
 <script>
 export default {
+  props: {
+    icon: {
+      type: String,
+      default: 'fa-circle-plus',
+    }
+  }
 }
 </script>
 

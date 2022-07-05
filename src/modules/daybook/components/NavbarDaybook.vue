@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <a href="" class="link-home">
-      <img class="logo" src="@/assets/logo.png" alt="Vue Logo">
+      <i class="fa-solid fa-newspaper"></i>
       Daybook
     </a>
 
@@ -13,27 +13,35 @@
   </nav>
 </template>
 
-<style lang="scss">
-@import '@/styles/variables.scss';
+<style lang="scss" scoped>
+@import "@/styles/variables.scss";
 .navbar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  border-radius: 20px;
   background-color: $background;
-  margin: 1rem 1.5rem;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.7rem;
+  border-bottom: 2px solid $warm-gray;
   .link-home {
     display: flex;
     align-items: center;
     gap: 1rem;
     text-decoration: none;
-    color: $main;
+    color: $light-white;
     font-weight: bold;
     font-size: 2rem;
-    img {
-      width: 3rem;
+    i {
+      color: $main;
     }
   }
-  
+  button {
+    background: none;
+    border: none;
+    i {
+      cursor: pointer;
+      font-size: 2rem;
+      color: $light-white;
+    }
+  }
 }
 </style>
