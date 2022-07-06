@@ -13,7 +13,7 @@
   </div>
 
   <div>
-    <textarea placeholder="¿Qué sucedió hoy?" cols="30" rows="10"></textarea>
+    <textarea id="textarea" placeholder="¿Qué sucedió hoy?" cols="30" rows="10"></textarea>
   </div>
 
   <AddBtn icon="fa-floppy-disk"/>
@@ -42,6 +42,17 @@ export default {
   border-radius: 7px;
   padding: 0.8rem 3rem;
   color: $main;
+}
+#textarea {
+  margin: 2rem 0 2rem 0;
+  background-color: $background;
+  border: none;
+  resize: none;
+  outline: none;
+  color: $title;
+  width: 100%;
+  height: calc(100vh - 13.7rem);
+  font-size: 1.5rem;
 }
 #delete {
   cursor: pointer;

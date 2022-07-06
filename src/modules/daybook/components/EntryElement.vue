@@ -21,8 +21,8 @@ export default {
 <style lang="scss" scoped>
 @import '@/styles/variables.scss';
 .entry-container {
+  font-family: $quicksand;
   margin: 1rem 0 3rem 0;
-  cursor: pointer;
   &:hover {
     color: $main;
   }
@@ -30,11 +30,12 @@ export default {
 .entry-title {
   display: flex;
   align-items: center;
+  cursor: pointer;
   color: $title;
   font-weight: 500;
   margin-bottom: .4rem;
   .dot {
-    margin: 0 .3rem .25rem 0;
+    padding: 0 .3rem .45rem 0;
   }
   &:hover {
     color: $main;
