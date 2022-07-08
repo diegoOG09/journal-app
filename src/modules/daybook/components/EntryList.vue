@@ -2,21 +2,38 @@
   <div class="entry-list">
     <div class="search">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" class="form-control" placeholder="Buscar una entrada" />
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Buscar una entrada" 
+        v-model="term"
+      />
     </div>
 
     <div class="entry-scrollarea">
-      <EntryElement v-for="item in 100" :key="item" />
+      <EntryElement v-for="item in entriesByTerm" :key="item" />
     </div>
   </div>
 </template>
 
 <script>
 import { defineAsyncComponent } from "vue";
+import { mapGetters } from "vuex";
 export default {
   components: {
     EntryElement: defineAsyncComponent(() => import("./EntryElement.vue")),
   },
+  computed: {
+    ...mapGetters('journal', ['getEntriesByTerm']),
+    entriesByTerm() {
+      return this.getEntriesByTerm(this.term)
+    }
+  },
+  data() {
+    return {
+      term: ''
+    }
+  }
 };
 </script>
 
